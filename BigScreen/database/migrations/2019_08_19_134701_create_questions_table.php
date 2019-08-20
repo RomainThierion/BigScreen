@@ -16,6 +16,7 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('text');
             $table->enum('type', ['enum','varchar','range']);
             $table->string('choice')->nullable();
             $table->timestamps();
