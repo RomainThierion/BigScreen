@@ -11,4 +11,11 @@
 |
 */
 
+
+Auth::routes();
+
 Route::get('/', 'FrontController@index');
+
+Route::post('/', 'FrontController@storeResponses');
+
+Route::resource('backoffice', 'FrontController')->middleware('auth');
