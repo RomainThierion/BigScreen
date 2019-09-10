@@ -16,6 +16,16 @@ Auth::routes();
 
 Route::get('/', 'FrontController@index');
 
-Route::post('/', 'FrontController@storeResponses');
+Route::get('/validate', function () {
+  return view('validate');
+});
 
-Route::resource('backoffice', 'FrontController')->middleware('auth');
+Route::get('survey/{link}', function ($link) {
+  return App\Survey::find($link);
+});
+
+Route::post('', 'FrontController@storeResponses');
+
+Route::resource('administration', 'FrontController')->middleware('auth');
+
+Route::view('/administration', 'administration');

@@ -1,5 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+.bigscreen-form {
+  margin: 40px auto;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 20px;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.big-margin-top {
+  margin-top: 100px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.sticky {
+  position: fixed !important;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}
+
+.nav-margin {
+  margin-top: 60px;
+}
+
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

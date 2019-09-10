@@ -6,19 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Response extends Model
 {
-  protected $fillable = array(
-    'created_by_user_id',
-    'updated_by_user_id',
-    'question_id'
-  );
-
-  public function responses(){
-    return $this->hasOne('App\Question');
-  }
+  protected $fillable = ['question_id','survey_id','value'];
 
   public function scopeQuestion() {
     return Question::find($this.question_id);
   }
 
-  
+  public function responses(){
+    return $this->hasOne('App\Question');
+  }
 }
