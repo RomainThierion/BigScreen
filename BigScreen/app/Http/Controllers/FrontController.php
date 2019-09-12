@@ -25,6 +25,9 @@ class FrontController extends Controller
         'email' => $request->email
       ]);
     }
+    else {
+      return view('erreur');
+    }
 
     foreach($request->all() as $key => $value ){
       if ($key == '_token' | $key == 'email') {
@@ -41,4 +44,6 @@ class FrontController extends Controller
 
     return redirect('validate');
   }
+
+  
 }

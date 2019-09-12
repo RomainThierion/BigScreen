@@ -8,14 +8,14 @@
 
   <div class="form-group">
     @foreach($questions as $question)
-      <h3 class="margin-top">{{$question->title}}</h2>
+      <h3 class="margin-top">Question {{$question->title}}</h2>
       <label>{{$question->text}}</label><br/>
 
       @if($question->text == 'Votre adresse mail')
         <input type="email" class="form-control input-style" name="email">
 
       @elseif($question->text == 'Votre âge')
-        <input type="number" class="form-control input-style" name="email" min="1" max="150">
+        <input type="number" class="form-control input-style" name="{{$question->id}}" min="1" max="150">
 
       @elseif($question->type === "enum")
         <select id="select" class="form-control input-style" name="{{$question->id}}">

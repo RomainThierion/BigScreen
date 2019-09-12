@@ -9,7 +9,7 @@ class Response extends Model
   protected $fillable = ['question_id','survey_id','value'];
 
   public function scopeQuestion() {
-    return Question::find($this.question_id);
+    return Question::find($this->question_id);
   }
 
   public function responses(){

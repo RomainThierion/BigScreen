@@ -20,12 +20,18 @@ Route::get('/validate', function () {
   return view('validate');
 });
 
+Route::get('/erreur', function () {
+  return view('erreur');
+});
+
 Route::get('survey/{link}', function ($link) {
   return App\Survey::find($link);
 });
 
 Route::post('', 'FrontController@storeResponses');
 
-Route::resource('administration', 'FrontController')->middleware('auth');
+Route::get('/administration', 'AdminController@admin');
 
-Route::view('/administration', 'administration');
+Route::get('/administration/survey', 'AdminController@survey');
+
+Route::get('/administration/responses', 'AdminController@responses');
