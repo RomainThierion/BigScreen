@@ -5,7 +5,7 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item nav-margin">
+      <li class="nav-item medium-margin-top">
         <a class="nav-link" href="/administration">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Accueil</span>
@@ -27,7 +27,7 @@
 
       <div class="container-fluid">
 
-        <table class="table table-bordered" style="margin-top: 60px;">
+        <table class="table table-bordered medium-margin-top">
           <thead>
             <tr>
               <th scope="col">N°</th>
@@ -56,6 +56,6 @@
   <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+  <a class="scroll-to-top rounded" href="#">
+    <img class="arrow-top" src="{{asset('tiny-arrow-top.png')}}" alt="arrow-top"/>
   </a>

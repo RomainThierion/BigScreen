@@ -24,8 +24,8 @@ Route::get('/erreur', function () {
   return view('erreur');
 });
 
-Route::get('survey/{link}', function ($link) {
-  return App\Survey::find($link);
+Route::get('/{link}', function ($link) {
+  return view('erreur');
 });
 
 Route::post('', 'FrontController@storeResponses');

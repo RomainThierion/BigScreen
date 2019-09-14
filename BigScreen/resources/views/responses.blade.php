@@ -5,7 +5,7 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item nav-margin">
+      <li class="nav-item medium-margin-top">
         <a class="nav-link" href="/administration">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Accueil</span>
@@ -28,26 +28,26 @@
       <div class="container-fluid">
       
       @foreach($surveys as $survey)
-      <h3 style="margin-top: 60px;">Formulaire de: {{$survey->email}}</h3>
-      <p> Fait le : {{$survey->created_at}}</p>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">N°</th>
-              <th scope="col">Questions</th>
-              <th scope="col">Réponses</th>
-            </tr>
-          </thead>
-          <tbody>
-          @foreach($survey->responses as $response)
-            <tr>
-              <td>{{$response->Question()->title}}</td>
-              <td>{{$response->Question()->text}}</td>
-              <td>{{$response->value}}</td>
-            </tr>
-          @endforeach
-          </tbody>
-        </table>
+        <h3 class="medium-margin-top">Formulaire de: {{$survey->email}}</h3>
+        <p> Fait le : {{$survey->created_at}}</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">N°</th>
+                <th scope="col">Questions</th>
+                <th scope="col">Réponses</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach($survey->responses as $response)
+              <tr>
+                <td>{{$response->Question()->title}}</td>
+                <td>{{$response->Question()->text}}</td>
+                <td>{{$response->value}}</td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
       @endforeach
       </div>
       <!-- /.container-fluid -->
@@ -59,6 +59,6 @@
   <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+  <a class="scroll-to-top rounded" href="#">
+    <img class="arrow-top" src="{{asset('tiny-arrow-top.png')}}" alt="arrow-top"/>
   </a>

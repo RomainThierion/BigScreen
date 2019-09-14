@@ -25,8 +25,12 @@
   width: 100%;
 }
 
-.nav-margin {
+.medium-margin-top {
   margin-top: 60px;
+}
+
+.arrow-top {
+  width: 50px;
 }
 
 
