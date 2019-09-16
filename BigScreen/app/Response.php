@@ -12,7 +12,13 @@ class Response extends Model
     return Question::find($this->question_id);
   }
 
+  public function scopeSurvey() {
+    return Survey::find($this->survey_id);
+  }
+
   public function responses(){
     return $this->hasOne('App\Question');
   }
+
+
 }

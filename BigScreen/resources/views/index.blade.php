@@ -46,7 +46,7 @@
         </div>
       @endif
     @endforeach
-    <input type="submit" class="btn btn-outline-primary margin-top" value="Valider">
+    <input type="submit" class="btn btn-outline-primary margin-top" value="Finaliser">
   </div>
 </form>
 

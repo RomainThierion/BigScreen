@@ -1,7 +1,6 @@
 @extends('master')
 @section('content')
 
-@foreach($surveys as $survey)
 <h3 class="medium-margin-top">Formulaire de: {{$survey->email}}</h3>
 <p> Fait le : {{$survey->created_at}}</p>
   <table class="table table-bordered">
@@ -22,4 +21,3 @@
     @endforeach
     </tbody>
   </table>
-@endforeach

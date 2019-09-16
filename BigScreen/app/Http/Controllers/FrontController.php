@@ -25,7 +25,7 @@ class FrontController extends Controller
         'email' => $request->email
       ]);
     }
-    else {
+    elseif ($survey !== null) {
       return view('erreur');
     }
 
@@ -42,8 +42,11 @@ class FrontController extends Controller
       }
     }
 
-    return redirect('validate');
+    return view('validate', ['survey' => $survey]);
   }
 
-  
+  public function yourSurvey(string $link) {
+    $survey = Survey::where('link', $link)->first();
+    return view('yourSurvey', ['survey' => $survey]);
+  }
 }

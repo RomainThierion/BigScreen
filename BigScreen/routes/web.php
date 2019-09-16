@@ -16,17 +16,11 @@ Auth::routes();
 
 Route::get('/', 'FrontController@index');
 
-Route::get('/validate', function () {
-  return view('validate');
-});
-
 Route::get('/erreur', function () {
   return view('erreur');
 });
 
-Route::get('/{link}', function ($link) {
-  return view('erreur');
-});
+Route::get('/questionnaire/{link}', 'FrontController@yourSurvey');
 
 Route::post('', 'FrontController@storeResponses');
 
