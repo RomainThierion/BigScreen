@@ -2,6 +2,7 @@
 @section('content')
 
 <script src="{{ asset('js/chart.js') }}"></script>
+<script src="{{ asset('js/chart-plugin.js') }}"></script>
 
   <div id="wrapper">
 
@@ -55,6 +56,14 @@
                     backgroundColor: @json($pie_chart->colors),
                   }]
                 },
+                options: {
+                  plugins: {
+                    labels: {
+                      // render 'label', 'value', 'percentage', 'image' or custom function, default is 'percentage'
+                      render: 'value'
+                    }
+                  }
+                }
               });
             </script>
           @endforeach
