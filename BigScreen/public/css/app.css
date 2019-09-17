@@ -33,6 +33,11 @@
   width: 50px;
 }
 
+.alert-bigscreen {
+  width: 500px; 
+  margin: 100px auto 0 auto;
+}
+
 
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)

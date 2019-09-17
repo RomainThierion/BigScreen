@@ -22,11 +22,11 @@
           <span>Réponses</span></a>
       </li>
     </ul>
+    <!-- End Sidebar -->
 
+    <!-- All Questions -->
     <div id="content-wrapper">
-
       <div class="container-fluid">
-
         <table class="table table-bordered medium-margin-top">
           <thead>
             <tr>
@@ -45,15 +45,10 @@
             @endforeach
           </tbody>
         </table>
-
       </div>
-      <!-- /.container-fluid -->
-
     </div>
-    <!-- /.content-wrapper -->
-
+    <!-- End All Questions -->
   </div>
-  <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#">

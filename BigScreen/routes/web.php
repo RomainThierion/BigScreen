@@ -11,7 +11,6 @@
 |
 */
 
-
 Auth::routes();
 
 Route::get('/', 'FrontController@index');

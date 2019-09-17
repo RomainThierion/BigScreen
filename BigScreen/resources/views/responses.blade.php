@@ -2,7 +2,6 @@
 @section('content')
 
   <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item medium-margin-top">
@@ -22,13 +21,13 @@
           <span>Réponses</span></a>
       </li>
     </ul>
+    <!--End Sidebar -->
 
+    <!-- All Surveys -->
     <div id="content-wrapper">
-
       <div class="container-fluid">
-      
       @foreach($surveys as $survey)
-        <h3 class="medium-margin-top">Formulaire de: {{$survey->email}}</h3>
+        <h4 class="medium-margin-top">Formulaire de: {{$survey->email}}</h3>
         <p> Fait le : {{$survey->created_at}}</p>
           <table class="table table-bordered">
             <thead>
@@ -50,13 +49,9 @@
           </table>
       @endforeach
       </div>
-      <!-- /.container-fluid -->
-
     </div>
-    <!-- /.content-wrapper -->
-
+    <!-- ENd All Surveys -->
   </div>
-  <!-- /#wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#">
